@@ -10,20 +10,22 @@
   <body>
     <div class="Signup">
       <h2>Sign Up</h2>
-      <form id="signupForm" enctype="multipart/form-data">
+
+      <form>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required /><br /><br />
-        <label for="Mobile">Mobile:</label>
-        <input type="tel" id="Mobile" name="Mobile" required /><br /><br />
+        <input type="text" id="username" name="username" />
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel" id="mobile" name="mobile" />
+
         <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required /><br /><br />
+        <input type="email" id="email" name="email" />
+
         <label for="role">Role:</label>
         <select id="role" name="role">
           <option value="user">User</option>
           <option value="volunteer">Volunteer</option>
         </select>
-
-        <br /><br />
 
         <div id="imageSection" style="display: none">
           <label for="image">Upload Image:</label>
@@ -31,20 +33,18 @@
         </div>
 
         <label for="password">Password:</label>
+        <input type="password" id="password" name="password" />
 
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-        /><br /><br />
-        <a href="../pages/user.html" class="btn">Signup</a>
+        <!-- JUST PAGE REDIRECT BUTTON -->
+        <a href="../pages/user.html" class="signup-btn">Signup</a>
 
         <p class="login">
-          Already have an account? <a href="./login.html">Login</a>
+          Already have an account?
+          <a href="./login.html">Login</a>
         </p>
       </form>
     </div>
+
     <script>
       const role = document.getElementById("role");
       const imageSection = document.getElementById("imageSection");

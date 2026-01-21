@@ -41,7 +41,8 @@ body {
   color: #374151;
 }
 
-.Signup input, .Signup select {
+.Signup input,
+.Signup select {
   width: 100%;
   padding: 12px;
   margin-bottom: 20px;
@@ -50,20 +51,23 @@ body {
   font-size: 16px;
 }
 
-.Signup button {
+/* SIGNUP BUTTON (ANCHOR AS BUTTON) */
+.signup-btn {
+  display: block;
   width: 100%;
   padding: 14px;
   background-color: var(--primary_blue);
   color: white;
-  border: none;
+  text-align: center;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-.Signup button:hover {
+.signup-btn:hover {
   background-color: #1e40af;
 }
 
