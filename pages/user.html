@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SafeTracker | User</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/style/user.css" />
+  </head>
+
+  <body>
+    <header class="header_nav">
+      <a href="#" class="logo_nav">
+        <i class="fas fa-shield-halved"></i>
+        <h2>SafeTracker</h2>
+      </a>
+      <nav class="nav_links">
+        <a href="#" class="nav_link">About Us</a>
+        <a href="#" class="nav_link">Contact</a>
+      </nav>
+    </header>
+
+    <img src="../assets/background.png" alt="Banner" class="img" />
+
+    <div class="main_container">
+      <div class="request_box">
+        <h2><i class="fas fa-hand-holding-heart"></i> Request Help</h2>
+
+        <form id="incidentForm">
+          <label for="location">Current Location:</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Your address will appear here..."
+            required
+          />
+          <button type="button" class="get_map_btn">Get Map</button>
+          <div class="map_wrapper">
+            <iframe
+              src="https://maps.google.com/maps?q=Chennai&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <label for="select" class="incident_type"
+            >Select Incident Type:</label
+          >
+          <select id="select" name="select" class="incident_type">
+            <option value="security">Security Escort</option>
+            <option value="safe">Safe Passage</option>
+            <option value="emergency">Emergency Help</option>
+          </select>
+          <button type="submit" class="submit">Submit Request</button>
+        </form>
+      </div>
+      <div class="request">
+        <section class="card">
+          <h2><i class="fas fa-clock-rotate-left"></i> Requests</h2>
+
+          <div class="request_list" id="requestList">
+            <!-- Dynamic requests will be loaded here -->
+            <div class="request_item">
+              <div class="request_info">
+                <h4>Security Escort Needed</h4>
+                <p>Location: Chennai Central • Just now</p>
+              </div>
+              <span class="status_badge status_pending">Pending</span>
+            </div>
+            <div class="request_item">
+              <div class="request_info">
+                <h4>Security Escort Needed</h4>
+                <p>Location: Chennai Central • Just now</p>
+              </div>
+              <span class="status_badge status_completed">Completed</span>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- <script>
+    const incidentForm = document.getElementById('incidentForm');
+
+    incidentForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(incidentForm);
+
+      try {
+        const response = await fetch('http://localhost:8080/incidents/create', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          alert('Request submitted successfully!');
+          location.reload();
+        } else {
+          alert('Error submitting request');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Could not connect to backend');
+      }
+    });
+
+    // Load existing requests
+    async function loadRequests() {
+      try {
+        const response = await fetch('http://localhost:8080/incidents/all');
+        const data = await response.json();
+        const list = document.getElementById('requestList');
+        // Optionally clear list and append dynamic items here
+      } catch (e) { }
+    }
+    loadRequests();
+  </script> -->
+  </body>
+</html>

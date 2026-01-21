@@ -1,0 +1,147 @@
+:root {
+  --primary_blue: #1d4ed8;
+  --bg_color: #f0f4f8;
+  --text_dark: #1f2937;
+  --text_light: #4b5563;
+  --card_bg: #ffffff;
+  --circle_bg: #eff6ff;
+  --transition_speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+}
+
+body {
+  background-color: var(--bg_color);
+}
+.header_nav {
+  background-color: var(--primary_blue);
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.logo_nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+.logo_nav h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.nav_links {
+  display: flex;
+  gap: 25px;
+}
+.nav_link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: var(--transition_speed);
+}
+.nav_link:hover {
+  text-decoration: none;
+  opacity: 0.8;
+}
+.containar {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 60px 20px;
+}
+.hero_logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--primary_blue);
+}
+.hero_logo h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+.hero_logo i {
+  font-size: 48px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: var(--text_light);
+  margin-top: -10px;
+  font-weight: 400;
+}
+
+.portal_wrapper {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card_role {
+  background-color: var(--card_bg);
+  width: 380px;
+  padding: 50px 35px;
+  border-radius: 28px;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: var(--transition_speed) ease;
+  border: 3px solid transparent;
+}
+.card_role:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: 3px solid var(--primary_blue);
+}
+
+.icon_box_circle {
+  width: 120px;
+  height: 120px;
+  background-color: var(--circle_bg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.icon_box_circle i {
+  font-size: 50px;
+  color: var(--primary_blue);
+}
+
+.card_role p {
+  color: var(--text_light);
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  min-height: 80px;
+}
+.btn_action {
+  background-color: var(--primary_blue);
+  color: white;
+  padding: 15px 0;
+  font-weight: 600;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  border-radius: 12px;
+}
