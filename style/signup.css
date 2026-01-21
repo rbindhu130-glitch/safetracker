@@ -50,7 +50,7 @@ body {
   font-size: 16px;
 }
 
-.btn {
+.Signup button {
   width: 100%;
   padding: 14px;
   background-color: var(--primary_blue);
