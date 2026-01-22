@@ -4,39 +4,150 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>safetracker | Signup</title>
-    <link rel="stylesheet" href="../style/signup.css" />
+
+    <style>
+      :root {
+        --primary_blue: #1d4ed8;
+        --bg_color: #f0f4f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: var(--bg_color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        padding-top: 60px; /* top space */
+      }
+
+      /* Signup white box */
+      .Signup {
+        background-color: white;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 450px;
+      }
+
+      .Signup h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: var(--primary_blue);
+        font-size: 28px;
+      }
+
+      .Signup label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #374151;
+      }
+
+      .Signup input,
+      .Signup select {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: 1px solid #d1d5db;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      /* Signup button */
+      .signup-btn {
+        width: 100%;
+        padding: 14px;
+        background-color: var(--primary_blue);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+        cursor: pointer;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+      }
+
+      .signup-btn:hover {
+        background-color: #1e40af;
+        transform: translateY(-2px);
+      }
+
+      .login {
+        text-align: center;
+        margin-top: 20px;
+        color: #6b7280;
+      }
+
+      .login a {
+        color: var(--primary_blue);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Back to Home – WHITE BOX KEELA */
+      .home-outside {
+        margin-top: 25px;
+        padding: 14px 25px;
+        background-color: #e5e7eb;
+        color: #1f2937;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 8px;
+        transition:
+          background-color 0.3s,
+          transform 0.2s;
+      }
+
+      .home-outside:hover {
+        background-color: #d1d5db;
+        transform: translateY(-2px);
+      }
+    </style>
   </head>
 
   <body>
+    <!-- Signup Box -->
     <div class="Signup">
       <h2>Sign Up</h2>
 
       <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
+        <label for="username">Username</label>
+        <input type="text" id="username" required />
 
-        <label for="mobile">Mobile:</label>
-        <input type="tel" id="mobile" name="mobile" />
+        <label for="mobile">Mobile</label>
+        <input type="tel" id="mobile" required />
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" />
+        <label for="email">Email</label>
+        <input type="email" id="email" required />
 
-        <label for="role">Role:</label>
-        <select id="role" name="role">
+        <label for="role">Role</label>
+        <select id="role" required>
+          <option value="">Select role</option>
           <option value="user">User</option>
           <option value="volunteer">Volunteer</option>
         </select>
 
+        <!-- Volunteer image upload -->
         <div id="imageSection" style="display: none">
-          <label for="image">Upload Image:</label>
-          <input type="file" id="image" name="image" />
+          <label for="image">Upload Image</label>
+          <input type="file" id="image" />
         </div>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" />
+        <label for="password">Password</label>  
+        <input type="password" id="password" required />
 
-        <!-- JUST PAGE REDIRECT BUTTON -->
-        <a href="../pages/user.html" class="signup-btn">Signup</a>
+        <button type="submit" class="signup-btn">Signup</button>
 
         <p class="login">
           Already have an account?
@@ -45,15 +156,20 @@
       </form>
     </div>
 
+    <a href="../index.html" class="home-outside">← Back to Home</a>
+
     <script>
       const role = document.getElementById("role");
       const imageSection = document.getElementById("imageSection");
+      const imageInput = document.getElementById("image");
 
       role.addEventListener("change", () => {
         if (role.value === "volunteer") {
           imageSection.style.display = "block";
+          imageInput.required = true;
         } else {
           imageSection.style.display = "none";
+          imageInput.required = false;
         }
       });
     </script>

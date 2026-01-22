@@ -1,99 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Volunteer | SafeTracker</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer | SafeTracker</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style/volunteer.css" />
+  </head>
 
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="../style/volunteer.css">
-</head>
+  <body>
+    <header class="header_nav">
+      <a href="#" class="logo_nav">
+        <i class="fas fa-shield-halved"></i>
+        <h2>SafeTracker</h2>
+      </a>
+      <nav class="nav_links">
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
 
-<body>
-  <header class="header_nav">
-    <a href="#" class="logo_nav">
-      <i class="fas fa-shield-halved"></i>
-      <h2>SafeTracker</h2>
-    </a>
-    <nav class="nav_links">
-      <a href="#">About Us</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+    <img src="../assets/background.png" alt="background" class="bg_img" />
 
-  <img src="../assets/background.png" alt="background" class="bg_img" />
+    <div class="requests_container">
+      <div class="incidents">
+        <h2><i class="fas fa-tower-broadcast"></i> Live Requests</h2>
 
-  <div class="requests_container">
-
-    <div class="incidents">
-      <h2><i class="fas fa-tower-broadcast"></i> Live Requests</h2>
-
-      <div class="request">
-        <div class="request_row">
-          <div class="request_info">
-            <p class="request_title">Emergency Help</p>
-            <p class="request_meta">Chennai Central <span class="dot"></span> Just now</p>
+        <div class="request">
+          <div class="request_row">
+            <div class="request_info">
+              <p class="request_title">Emergency Help</p>
+              <p class="request_meta">
+                Chennai Central <span class="dot"></span> Just now
+              </p>
+            </div>
+            <span class="incident_status">Accept</span>
           </div>
-          <span class="incident_status">Accept</span>
+        </div>
+
+        <div class="request">
+          <div class="request_row">
+            <div class="request_info">
+              <p class="request_title">Safe Passage</p>
+              <p class="request_meta">
+                Velachery Road <span class="dot"></span> 5 hours ago
+              </p>
+            </div>
+            <span class="incident_status">Accept</span>
+          </div>
+        </div>
+
+        <div class="request">
+          <div class="request_row">
+            <div class="request_info">
+              <p class="request_title">Security Escort</p>
+              <p class="request_meta">
+                Taramani Railway Station <span class="dot"></span> 10 mins ago
+              </p>
+            </div>
+            <span class="incident_status">Accept</span>
+          </div>
         </div>
       </div>
 
-      <div class="request">
-        <div class="request_row">
-          <div class="request_info">
-            <p class="request_title">Safe Passage</p>
-            <p class="request_meta">Velachery Road <span class="dot"></span> 5 hours ago</p>
-          </div>
-          <span class="incident_status">Accept</span>
-        </div>
-      </div>
+      <div class="completed">
+        <h2><i class="fas fa-list-check"></i> Completed</h2>
 
-      <div class="request">
-        <div class="request_row">
-          <div class="request_info">
-            <p class="request_title">Security Escort</p>
-            <p class="request_meta">Taramani Railway Station <span class="dot"></span> 10 mins ago</p>
+        <div class="completed_incident">
+          <div>
+            <p>Safe Passage</p>
+            <p>Location: Chennai Central</p>
+            <p>Status: completed</p>
           </div>
-          <span class="incident_status">Accept</span>
+          <div class="status">COMPLETED</div>
+        </div>
+
+        <div class="completed_incident">
+          <div>
+            <p>Emergency Help</p>
+            <p>Location: Velachery Road</p>
+            <p>Status: completed</p>
+          </div>
+          <div class="status">COMPLETED</div>
+        </div>
+
+        <div class="completed_incident">
+          <div>
+            <p>Security Escort</p>
+            <p>Location: Taramani Railway Station</p>
+            <p>Status: completed</p>
+          </div>
+          <div class="status">COMPLETED</div>
         </div>
       </div>
     </div>
-
-    <!-- COMPLETED -->
-    <div class="completed">
-      <h2><i class="fas fa-list-check"></i> Completed</h2>
-
-      <div class="completed_incident">
-        <div>
-          <p>Safe Passage</p>
-          <p>Location: Chennai Central</p>
-          <p>Status: completed</p>
-        </div>
-        <div class="status">COMPLETED</div>
-      </div>
-
-      <div class="completed_incident">
-        <div>
-          <p>Emergency Help</p>
-          <p>Location: Velachery Road</p>
-          <p>Status: completed</p>
-        </div>
-        <div class="status">COMPLETED</div>
-      </div>
-
-      <div class="completed_incident">
-        <div>
-          <p>Security Escort</p>
-          <p>Location: Taramani Railway Station</p>
-          <p>Status: completed</p>
-        </div>
-        <div class="status">COMPLETED</div>
-      </div>
-
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>

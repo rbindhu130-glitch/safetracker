@@ -1,0 +1,147 @@
+:root {
+  --blue: #1D4ED8;
+  --white: #ffffff;
+  --red: #E63946;
+  --black: #000000;
+  --bg: #F0F4F8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+}
+
+/* NAVBAR */
+.navbar {
+  height: 64px;
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.logo i {
+  font-size: 22px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-right a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+
+
+/* CONTACT SECTION */
+.contact-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.contact-container {
+  background-color: var(--white);
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* LEFT */
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  color: var(--red);
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.contact-info ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+/* RIGHT */
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h3 {
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #153bb8;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--white);
+  text-align: center;
+  padding: 40px;
+  font-size: 14px;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+}

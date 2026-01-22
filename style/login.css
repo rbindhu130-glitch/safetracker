@@ -60,11 +60,27 @@ body {
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
 .login button:hover {
   background-color: #1e40af;
+}
+
+/* Back to Home (form keela) */
+.home {
+  display: block;
+  margin-top: 15px;
+  padding: 12px;
+  text-align: center;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.home:hover {
+  background-color: #d1d5db;
 }
 
 .signup {
