@@ -7,18 +7,21 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: poppins, sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
   background-color: var(--bg_color);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding-top: 60px;
 }
 
+/* White login box */
 .login {
+  margin-top: 200px;
   background-color: white;
   padding: 40px;
   border-radius: 12px;
@@ -60,27 +63,14 @@ body {
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
 }
 
 .login button:hover {
   background-color: #1e40af;
-}
-
-/* Back to Home (form keela) */
-.home {
-  display: block;
-  margin-top: 15px;
-  padding: 12px;
-  text-align: center;
-  background-color: #e5e7eb;
-  color: #1f2937;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.home:hover {
-  background-color: #d1d5db;
+  transform: translateY(-2px);
 }
 
 .signup {
@@ -93,4 +83,24 @@ body {
   color: var(--primary_blue);
   text-decoration: none;
   font-weight: 600;
+}
+
+/* Back to Home – Signup page style */
+.home-outside {
+  margin-top: 25px;
+  padding: 14px 25px;
+  background-color: #e5e7eb;
+  color: #1f2937;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.home-outside:hover {
+  background-color: #d1d5db;
+  transform: translateY(-2px);
 }

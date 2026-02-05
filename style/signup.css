@@ -14,11 +14,12 @@ body {
   background-color: var(--bg_color);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding-top: 60px; /* top space */
 }
 
+/* Signup white box */
 .Signup {
   background-color: white;
   padding: 40px;
@@ -52,17 +53,16 @@ body {
   font-size: 16px;
 }
 
+/* Signup button */
 .signup-btn {
-  display: block;
   width: 100%;
   padding: 14px;
   background-color: var(--primary_blue);
   color: white;
-  text-align: center;
+  border: none;
   border-radius: 8px;
   font-size: 18px;
   font-weight: 600;
-  text-decoration: none;
   cursor: pointer;
   transition:
     background-color 0.3s,
@@ -86,12 +86,10 @@ body {
   font-weight: 600;
 }
 
-/* Back to Home button outside the white box */
+/* Back to Home – WHITE BOX KEELA */
 .home-outside {
-  display: block;
-  margin: 30px auto;
+  margin-top: 25px;
   padding: 14px 25px;
-  max-width: 250px;
   background-color: #e5e7eb;
   color: #1f2937;
   font-weight: 600;
